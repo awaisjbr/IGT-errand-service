@@ -2,7 +2,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "923048405104";
+  const phoneNumber = "971505608213";
   const message = encodeURIComponent("Hello, I'm interested in your services!");
 
   const handleWhatsAppClick = () => {
