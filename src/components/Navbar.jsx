@@ -18,7 +18,7 @@ const Navbar = () => {
           {mobileMenu ? <FaXmark onClick={() => setMobileMenu(false)}/> : <FaBars onClick={() => setMobileMenu(true)} />}
         </div>
         {mobileMenu && (
-          <div className="absolute right-0 top-14 w-48 flex justify-center bg-gradient-to-t from-blue-500 to-cyan-500 p-3 rounded-md">
+          <div className="absolute right-0 top-[68px] w-48 flex justify-center bg-gradient-to-t from-blue-500 to-cyan-500 p-3 rounded-md">
             <ul className="flex flex-col items-center gap-2 text-white text-2xl w-full">
               <Link to={"/"}><li className="hover:bg-cyan-600 font-poppins w-full py-1 tracking-wider rounded-md text-center" onClick={() => setMobileMenu(false)}>Home</li></Link>
               <Link to={"/service"}><li className="hover:bg-cyan-600 font-poppins w-full py-1 tracking-wider rounded-md text-center" onClick={() => setMobileMenu(false)}>Services</li></Link>
