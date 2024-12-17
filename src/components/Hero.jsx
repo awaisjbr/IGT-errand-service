@@ -1,6 +1,7 @@
 import React from "react";
 import heroImg from "../assets/hero.jpg";
 import { FaArrowRight } from "react-icons/fa6";
+import WhatsAppButton from "./WhatsAppButtom"
 
 const Hero = () => {
   return (
@@ -15,7 +16,8 @@ const Hero = () => {
             <h5 className="text-center font-bigShoulder text-2xl lg:text-4xl">Professional Errand Runners for All Your Needs :</h5>
           </div>
         </div>
-        <button className="flex mt-3 lg:mt-0 items-center gap-2 font-poppins bg-[tomato] text-white px-5 py-3 cursor-pointer lg:text-xl">Hire a runner <FaArrowRight /></button>
+        <WhatsAppButton />
+        {/* <button className="flex mt-3 lg:mt-0 items-center gap-2 font-poppins bg-[tomato] text-white px-5 py-3 cursor-pointer lg:text-xl">Hire a runner <FaArrowRight /></button> */}
       </div>
       <hr className="w-[90%] mx-auto my-5 divide-black"/>
     </div>
