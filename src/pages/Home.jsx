@@ -5,10 +5,10 @@ import OurServices from "../components/OurServices";
 import Footer from "../components/Footer";
 
 
-const Home = () => {
+const Home = ({sendMsg}) => {
   return (
     <div className="pt-8 lg:pt-0">
-      <Hero />
+      <Hero sendMsg={sendMsg}/>
       <HowItWorks />
       <OurServices />
       <Footer />

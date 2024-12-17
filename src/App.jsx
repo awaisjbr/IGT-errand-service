@@ -10,6 +10,12 @@ import BackgroundAnimation from "./components/BackgroundAnimation";
 
 const App = () => {
   const location = useLocation();
+  const phoneNumber = "971581212786";
+  const message = encodeURIComponent("Hey there! I'am intersted in your on-demand pick & deliver service!");
+
+  const handleWhatsAppClick = () => {
+    window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`, "_blank");
+  };
 
   return (
     <>
@@ -17,7 +23,7 @@ const App = () => {
       <Navbar />
       <BackgroundAnimation />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home sendMsg={handleWhatsAppClick}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
