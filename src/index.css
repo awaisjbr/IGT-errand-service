@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Prevent scrollbars during animation */
+    /* overflow: hidden; */
+    font-family: "Roboto";
+  }
+  /* .hero{
+    min-height: calc(100vh - 56px);
+  } */
+  
+  .black-motion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: black;
+    color: black;
+    z-index: 100;
+  }
+
+  ::-webkit-scrollbar {
+    width: 15px; /* For vertical scrollbar */
+    height: 5px; /* For horizontal scrollbar */
+    background-color: #000; /* Background of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1; /* Color of the thumb */
+    height: 20px;
+    border-radius: 10px; 
+    border: 5px solid #000; /* Adds padding around the thumb */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: #000; /* Background of the track */
+    /* border-radius: 10px; */
+}
+
+/* Style the scrollbar buttons (optional) */
+::-webkit-scrollbar-button {
+    display: none;
+    /* background-color: #ccc; */
+    /* border-radius: 5px; */
+}
+
+/* Style the corner between horizontal and vertical scrollbar */
+::-webkit-scrollbar-corner {
+    background-color: #b0b0b0;
+}
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar-track {
+    display: none; 
+    width: 0;
+    height: 0;
+  }}
+  
