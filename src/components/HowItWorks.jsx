@@ -1,6 +1,5 @@
 import React from "react";
 import hireImg from "../assets/hire.jpg";
-import bookImg from "../assets/book.jpg";
 import paymentImg from "../assets/payment.jpg";
 import deliverImg from "../assets/deliver.jpg";
 import findImg from "../assets/find.jpg";
