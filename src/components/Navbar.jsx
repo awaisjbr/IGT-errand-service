@@ -8,7 +8,7 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
-    <div className="h-16 flex items-center fixed w-full top-0 left-0 bg-gradient-to-t from-lime-400 to-green-400 px-5 lg:w-[90%] lg:rounded-xl lg:top-5 lg:left-16">
+    <div className="h-16 flex items-center fixed w-full top-0 left-0 bg-gradient-to-t from-lime-400 to-green-400 px-5 lg:w-[90%] lg:rounded-xl lg:top-5 lg:left-16 z-50">
       <div className="w-full flex items-center justify-between relative">
         <div className="logo flex items-center gap-3">
           <img className="w-32 lg:w-40" src={logo} alt="" />
@@ -18,7 +18,7 @@ const Navbar = () => {
           {mobileMenu ? <FaXmark onClick={() => setMobileMenu(false)}/> : <FaBars onClick={() => setMobileMenu(true)} />}
         </div>
         {mobileMenu && (
-          <div className="absolute right-0 top-[68px] w-48 flex justify-center bg-gradient-to-t from-blue-500 to-cyan-500 p-3 rounded-md">
+          <div className="absolute right-0 top-[68px] w-48 flex justify-center bg-[tomato] p-3 rounded-md">
             <ul className="flex flex-col items-center gap-2 text-white text-2xl w-full">
               <Link to={"/"}><li className="hover:bg-cyan-600 font-poppins w-full py-1 tracking-wider rounded-md text-center" onClick={() => setMobileMenu(false)}>Home</li></Link>
               <Link to={"/service"}><li className="hover:bg-cyan-600 font-poppins w-full py-1 tracking-wider rounded-md text-center" onClick={() => setMobileMenu(false)}>Services</li></Link>
