@@ -11,8 +11,8 @@ const Hero = ({sendMsg}) => {
             <img className="w-72 lg:w-[600px]" src={heroImg} alt="" />
           </div>
           <div className="select-none">
-            <h1 className="text-4xl text-center font-bigShoulder pointer-events-none uppercase leading-snug lg:text-5xl xl:text-6xl lg:leading-loose lg:font-semibold">Secure, Fast, Reliable <br /> <span className="font-bigShoulder text-[tomato] underline font-bold tracking-wider">errands</span>  <br /> Pick and Deliver Service <br /> at Your Doorstep.</h1>
-            <h5 className="text-center font-bigShoulder text-2xl lg:text-4xl">Professional Errand Runners tailored to your needs:</h5>
+            <h1 className="text-4xl text-center font-bigShoulder pointer-events-none uppercase leading-snug lg:text-5xl xl:text-6xl lg:leading-snug lg:font-semibold">Secure, Fast, Reliable <br /> <span className="font-bigShoulder text-[tomato] underline font-bold tracking-wider lg:leading-snug">errands</span>  <br /> Pick and Deliver Service <br /> at Your Doorstep.</h1>
+            <h5 className="text-center font-bigShoulder text-2xl lg:text-4xl lg:leading-snug">“Let us handle your errands while you focus on what matters most.”</h5>
           </div>
         </div>
         {/* <WhatsAppButton>Hire</WhatsAppButton> */}

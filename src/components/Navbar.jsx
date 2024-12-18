@@ -29,10 +29,10 @@ const Navbar = () => {
         )}
         <div className="hidden lg:block">
           <ul className="flex gap-10 text-xl">
-            <NavLink to={"/"}><li className="text-white font-poppins hover:bg-green-400 font-semibold tracking-wide py-1 w-[100px] text-center rounded-lg transition-all duration-300">Home</li></NavLink>
-            <NavLink to={"/service"}><li className="text-white font-poppins hover:bg-green-400 font-semibold tracking-wide py-1 w-[100px] text-center rounded-lg transition-all duration-300">Services</li></NavLink>
-            <NavLink to={"/about"}><li className="text-white font-poppins hover:bg-green-400 font-semibold tracking-wide py-1 w-[100px] text-center rounded-lg transition-all duration-300">About</li></NavLink>
-            <NavLink to={"/contact"}><li className="text-white font-poppins hover:bg-green-400 font-semibold tracking-wide py-1 w-[100px] text-center rounded-lg transition-all duration-300">Contact</li></NavLink>
+            <NavLink to={"/"}><li className="text-white font-poppins hover:bg-[tomato] font-semibold tracking-wide py-1 w-[100px] text-center rounded-lg transition-all duration-500">Home</li></NavLink>
+            <NavLink to={"/service"}><li className="text-white font-poppins hover:bg-[tomato] font-semibold tracking-wide py-1 w-[100px] text-center rounded-lg transition-all duration-500">Services</li></NavLink>
+            <NavLink to={"/about"}><li className="text-white font-poppins hover:bg-[tomato] font-semibold tracking-wide py-1 w-[100px] text-center rounded-lg transition-all duration-500">About</li></NavLink>
+            <NavLink to={"/contact"}><li className="text-white font-poppins hover:bg-[tomato] font-semibold tracking-wide py-1 w-[100px] text-center rounded-lg transition-all duration-500">Contact</li></NavLink>
           </ul>
         </div>
       </div>

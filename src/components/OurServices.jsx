@@ -6,6 +6,7 @@ import furnitureImg from "../assets/furniture.jpg";
 import groceryImg from "../assets/grocery.jpg";
 import fastfoodImg from "../assets/fastfood.jpg";
 import courierImg from "../assets/courier.jpg";
+import medicineImg from "../assets/medicine.jpg";
 
 const OurServices = () => {
   return (
@@ -20,19 +21,19 @@ const OurServices = () => {
         <h3 className="font-bigShoulder text-2xl font-bold underline">What we offer.</h3>
         <div className="overflow-x-scroll w-full flex gap-5 my-2">
             <div className="min-w-[350px] lg:min-w-[450px] xl:min-w-[550px] flex flex-col gap-1">
-                <img className="border h-60 lg:h-72 xl:h-96 p-2 rounded-md hover:scale-95 transition-all duration-500" src={personalImg} alt="Personal-Image" />
-                <h1 className="font-bold font-poppins lg:text-xl uppercase">Personal Shopping</h1>
-                <p className="text-sm mb-3 text-wrap font-roboto">Want us to purchase for you? Let us buy and deliver it to you.</p>
-            </div>
-            <div className="min-w-[350px] lg:min-w-[450px] xl:min-w-[550px] flex flex-col gap-1">
                 <img className="border h-60 lg:h-72 xl:h-96 p-2 rounded-md hover:scale-95 transition-all duration-500" src={courierImg} alt="Personal-Image" />
-                <h1 className="font-bold font-poppins lg:text-xl uppercase">Courier Errands</h1>
+                <h1 className="font-bold font-poppins lg:text-xl uppercase">Package Delivery</h1>
                 <p className="text-sm mb-3 text-wrap font-roboto">Fast and secure courier services tailored to your needs.</p>
             </div>
             <div className="min-w-[350px] lg:min-w-[450px] xl:min-w-[550px] flex flex-col gap-1">
-                <img className="border h-60 lg:h-72 xl:h-96 p-2 rounded-md hover:scale-95 transition-all duration-500" src={flowerImg} alt="Personal-Image" />
-                <h1 className="font-bold font-poppins lg:text-xl uppercase">Flowers Delivery Service</h1>
-                <p className="text-sm mb-3 text-wrap font-roboto">Wish your loved once with our pick and deliver service.</p>
+                <img className="border h-60 lg:h-72 xl:h-96 p-2 rounded-md hover:scale-95 transition-all duration-500" src={medicineImg} alt="Personal-Image" />
+                <h1 className="font-bold font-poppins lg:text-xl uppercase">Prescription Pickup</h1>
+                <p className="text-sm mb-3 text-wrap font-roboto">Ensuring your medications arrive safely.</p>
+            </div>
+            <div className="min-w-[350px] lg:min-w-[450px] xl:min-w-[550px] flex flex-col gap-1">
+                <img className="border h-60 lg:h-72 xl:h-96 p-2 rounded-md hover:scale-95 transition-all duration-500" src={personalImg} alt="Personal-Image" />
+                <h1 className="font-bold font-poppins lg:text-xl uppercase">Personal Shopping</h1>
+                <p className="text-sm mb-3 text-wrap font-roboto">Want us to purchase for you? Let us buy and deliver it to you.</p>
             </div>
             <div className="min-w-[350px] lg:min-w-[450px] xl:min-w-[550px] flex flex-col gap-1">
                 <img className="border h-60 lg:h-72 xl:h-96 p-2 rounded-md hover:scale-95 transition-all duration-500" src={furnitureImg} alt="Personal-Image" />
@@ -53,6 +54,11 @@ const OurServices = () => {
                 <img className="border h-60 lg:h-72 xl:h-96 p-2 rounded-md hover:scale-95 transition-all duration-500" src={fastfoodImg} alt="Personal-Image" />
                 <h1 className="font-bold font-poppins lg:text-xl uppercase">Food Delivery</h1>
                 <p className="text-sm mb-3 text-wrap font-roboto">Tired from your work load? Order your meal and let us deliver.</p>
+            </div>
+            <div className="min-w-[350px] lg:min-w-[450px] xl:min-w-[550px] flex flex-col gap-1">
+                <img className="border h-60 lg:h-72 xl:h-96 p-2 rounded-md hover:scale-95 transition-all duration-500" src={flowerImg} alt="Personal-Image" />
+                <h1 className="font-bold font-poppins lg:text-xl uppercase">Flowers Delivery Service</h1>
+                <p className="text-sm mb-3 text-wrap font-roboto">Wish your loved once with our pick and deliver service.</p>
             </div>
         </div>
       </div>

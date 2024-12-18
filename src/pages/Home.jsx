@@ -3,15 +3,18 @@ import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
 import OurServices from "../components/OurServices";
 import Footer from "../components/Footer";
+import { FaSquareWhatsapp } from "react-icons/fa6";
 
-
-const Home = ({sendMsg}) => {
+const Home = ({ sendMsg }) => {
   return (
-    <div className="pt-8 lg:pt-0">
-      <Hero sendMsg={sendMsg}/>
+    <div className="pt-8 lg:pt-0 relative">
+      <Hero sendMsg={sendMsg} />
       <HowItWorks />
       <OurServices />
-      <Footer />
+      {/* <Footer /> */}
+      <div onClick={() => sendMsg()} className="fixed bottom-8 right-6 bg-white rounded-md text-5xl lg:text-7xl cursor-pointer text-green-500">
+        <FaSquareWhatsapp />
+      </div>
     </div>
   );
 };
