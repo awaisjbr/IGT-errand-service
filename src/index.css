@@ -64,4 +64,23 @@
     width: 0;
     height: 0;
   }}
-  
+
+.carousel{
+  animation: slide 10s linear infinite;
+  overflow: hidden;
+}
+@keyframes slide{
+  0%{
+    opacity: 1;
+    transform: translate(-100%);
+  }
+  26%,75%{
+    opacity: 1;
+    transform: translate(0);
+  }
+  100%{
+    opacity: 0.5;
+    transform: translate(100%);
+  }
+
+}
