@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import BackgroundAnimation from "./components/BackgroundAnimation";
 import Footer from "./components/Footer";
+import Success from "./components/Success";
 
 const App = () => {
   const location = useLocation();
@@ -27,7 +28,8 @@ const App = () => {
         <Route path="/" element={<Home sendMsg={handleWhatsAppClick}/>} />
         <Route path="/about" element={<About sendMsg={handleWhatsAppClick}/>} />
         <Route path="/service" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact sendMsg={handleWhatsAppClick} />} />
+        <Route path="/success" element={<Success />} />
       </Routes>
       <Footer />
       </AnimatePresence>

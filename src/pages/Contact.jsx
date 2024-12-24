@@ -1,11 +1,140 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { FaMapSigns } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoIosSend } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+import { TailSpin } from "react-loader-spinner";
 
-const Contact = () => {
-  return (
+
+const Contact = ({sendMsg}) => {
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject:'',
+    message: '',
+  });
+  const navigate = useNavigate(); // For navigation to custom success page
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formURL = 'https://api.web3forms.com/submit';
+    const data = {
+      access_key: 'aff1f6e5-2f39-4cec-bc0a-0c95d3c3afb8', // Replace with your API key
+      ...formData,
+    };
+
+    try {
+      const response = await fetch(formURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        navigate('/success'); // Navigate to custom success page
+      } else {
+        throw new Error('Form submission failed.');
+      }
+    } catch (err) {
+      console.log(err.message);
+    } finally{
+      setLoading(false);
+    }
+  };
+
+  {loading && (
     <div>
-      Contact
+      <TailSpin
+        visible={true}
+        height="80"
+        width="80"
+        color="#4fa94d"
+        ariaLabel="tail-spin-loading"
+        radius="1"
+        wrapperStyle={{}}
+        wrapperClass=""
+      />
+    </div>
+  )}
+
+  return (
+    <div className='flex flex-col items-center lg:h-screen pt-20 lg:pt-24'>
+      <div className='my-2 text-center'>
+        <h1 className='font-bigShoulder font-extrabold text-3xl tracking-wider'>Get in Touch</h1>
+        <p className='font-poppins '>We’re here to assist you.</p>
+      </div>
+
+      <div className='flex flex-col md:flex-row gap-3 lg:gap-5 w-full lg:w-[90%] mt-10'>
+        
+        <div className='flex-1 hidden md:block'>
+          <div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162070.95186620127!2d54.43123837518988!3d24.356729720657192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e41363bec3597%3A0x2ec592a99064ef9c!2sCITYMART%20HYPERMARKET%20LLC!5e0!3m2!1sen!2s!4v1734968969280!5m2!1sen!2s" width="500" height="430" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> </div>
+        </div>
+
+        <div className='hidden lg:block flex-1 my-auto'>
+          <div className='flex flex-col gap-4 items-center text-sm'>
+            <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] p-1 text-[rgb(108,78,232)]'>
+              <div className='h-10 w-10 bg-slate-500 flex items-center justify-center rounded-full'>
+              <FaMapSigns className='text-yellow-400'/>
+              </div>
+              <p className='font-bigShoulder font-bold tracking-wider'>ADDRESS</p>
+              <p className='font-poppins text-center'>P.O Box 0000 , Abu Dhabi, UAE.</p>
+            </div>
+            <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] text-[rgb(108,78,232)] p-1'>
+              <div className='h-10 w-10 bg-slate-500 flex items-center justify-center rounded-full'>
+              <FaPhoneAlt className='text-yellow-400'/>
+              </div>
+              <p className='font-bigShoulder font-bold tracking-wider'>CONTACT NUMBER</p>
+              <p className='flex items-center gap-3'><span className='text-green-600'><FaWhatsappSquare size={25} onClick={() => sendMsg()} className='cursor-pointer'/></span><a className='font-poppins' href="tel:+971581212786">+971 58 1212 786</a></p>
+            </div>
+            <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] text-[rgb(108,78,232)] p-1'>
+              <div className='h-10 w-10 bg-slate-500 flex items-center justify-center rounded-full'>
+              <IoIosSend className='text-yellow-400'/>
+              </div>
+              <p className='font-bigShoulder font-bold tracking-wider'>EMAIL</p>
+              <p className='underline underline-offset-8'><a className='font-poppins' href="mailto:irhagt@gmail.com">irhagt@gmail.com</a></p>
+            </div>
+          </div>
+        </div> 
+        
+
+        <div className='w-[95%] md:max-w-96 mx-auto bg-gray-400 items-center mt-1 mb-10 flex-1 text-sm'>
+          <p className='text-center text-xl font-bold underline underline-offset-8 my-5  font-poppins'>Send Message</p>
+          <form onSubmit={handleSubmit} className='flex flex-col gap-5 my-2 items-center'>
+            {/* <input type="text" className='hidden' name="access_key"  value={"aff1f6e5-2f39-4cec-bc0a-0c95d3c3afb8"} onChange={() => ""}/> */}
+            <input className='border font-poppins h-10 w-[80%] p-2 outline-none text-slate-500' type="text" name='name' onChange={handleChange} placeholder='Your Name' autoComplete='off'/>
+            <input className='border font-poppins h-10 w-[80%] p-2 outline-none text-slate-500' type="email" name='email' onChange={handleChange} placeholder='Your Email' autoComplete='off'/>
+            <input className='border font-poppins h-10 w-[80%] p-2 outline-none text-slate-500' type="text" name="subject" onChange={handleChange} placeholder='Subject...' autoComplete='off'/>
+            <textarea className='w-[80%] font-poppins p-2 outline-none text-slate-500' rows={5} name="message" placeholder='Contact Number & Message' onChange={handleChange} autoComplete='off'/>
+            <button className='bg-[rgb(108,78,232)] text-white p-2 rounded-md font-poppins' type='submit'>Send Message</button>
+          </form>
+        </div>
+
+        <div className='flex-1 place-self-center md:hidden'>
+          <div className='mb-2'> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162070.95186620127!2d54.43123837518988!3d24.356729720657192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e41363bec3597%3A0x2ec592a99064ef9c!2sCITYMART%20HYPERMARKET%20LLC!5e0!3m2!1sen!2s!4v1734968969280!5m2!1sen!2s" width="350" height="350" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> </div>
+        </div>
+
+
+      </div>
     </div>
   )
 }
 
 export default Contact
+
+
+
+
+
+
+
