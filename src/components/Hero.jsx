@@ -16,7 +16,7 @@ const Hero = ({sendMsg}) => {
           </div>
         </div>
         {/* <WhatsAppButton>Hire</WhatsAppButton> */}
-        <button onClick={() => sendMsg()} className="flex mt-3 lg:mt-0 items-center gap-2 font-poppins bg-[tomato] text-white px-5 py-3 cursor-pointer lg:text-xl">Hire a runner <FaArrowRight /></button>
+        <button onClick={() => sendMsg()} className="flex mt-3 lg:mt-0 items-center gap-2 font-poppins bg-[tomato] text-white px-5 py-3 cursor-pointer lg:text-xl">Get a Runner <FaArrowRight /></button>
       </div>
       <hr className="w-[90%] mx-auto my-5 divide-black"/>
     </div>

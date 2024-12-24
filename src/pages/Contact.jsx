@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaMapSigns } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
-import { FaLinkedin } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import { TailSpin } from "react-loader-spinner";
@@ -18,19 +17,20 @@ const Contact = ({sendMsg}) => {
   });
   const navigate = useNavigate(); // For navigation to custom success page
 
+  // On Change Handler
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
+  // Form Submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     const formURL = 'https://api.web3forms.com/submit';
-    const data = {
-      access_key: 'aff1f6e5-2f39-4cec-bc0a-0c95d3c3afb8', // Replace with your API key
-      ...formData,
-    };
+    const data = {access_key: 'aff1f6e5-2f39-4cec-bc0a-0c95d3c3afb8', // Replace with your API key
+      ...formData,};
 
     try {
       const response = await fetch(formURL, {
@@ -53,21 +53,7 @@ const Contact = ({sendMsg}) => {
     }
   };
 
-  {loading && (
-    <div>
-      <TailSpin
-        visible={true}
-        height="80"
-        width="80"
-        color="#4fa94d"
-        ariaLabel="tail-spin-loading"
-        radius="1"
-        wrapperStyle={{}}
-        wrapperClass=""
-      />
-    </div>
-  )}
-
+  
   return (
     <div className='flex flex-col items-center lg:h-screen pt-20 lg:pt-24'>
       <div className='my-2 text-center'>
@@ -123,9 +109,23 @@ const Contact = ({sendMsg}) => {
         <div className='flex-1 place-self-center md:hidden'>
           <div className='mb-2'> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162070.95186620127!2d54.43123837518988!3d24.356729720657192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e41363bec3597%3A0x2ec592a99064ef9c!2sCITYMART%20HYPERMARKET%20LLC!5e0!3m2!1sen!2s!4v1734968969280!5m2!1sen!2s" width="350" height="350" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> </div>
         </div>
-
-
+      
       </div>
+
+      {loading && (
+        <div className='h-screen w-full flex items-center justify-center absolute top-0 left-0' style={{background:"rgba(0,0,0,0.7)", zIndex:"1"}}>
+          <TailSpin
+            visible={true}
+            height="180"
+            width="180"
+            color="#4fa94d"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
+      )};
     </div>
   )
 }

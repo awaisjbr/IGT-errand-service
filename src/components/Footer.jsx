@@ -25,7 +25,7 @@ const Footer = () => {
             <div className='flex flex-col gap-1'>
                 <h1 className='font-poppins text-2xl underline underline-offset-4 font-bold mb-5'>Contact Us</h1>
                 <p className='font-poppins'>Email: <a href="mailto:irhagt@gmail.com">irhagt@gmail.com</a></p>
-                <p className='font-poppins'>Phone: <a href="tel:+971505608213">+971 50 5608213</a></p>
+                <p className='font-poppins'>Phone: <a href="tel:+971581212786">+971 58 1212 786</a></p>
                 <p className='font-poppins'>Working Hours: Mon-Sat 9AM - 9PM</p>
             </div>
             <div className='flex flex-col gap-1 mb-5'>

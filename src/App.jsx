@@ -21,17 +21,17 @@ const App = () => {
 
   return (
     <>
-    <AnimatePresence key={location.pathname} location={location}>
-      <Navbar />
-      <BackgroundAnimation />
-      <Routes>
-        <Route path="/" element={<Home sendMsg={handleWhatsAppClick}/>} />
-        <Route path="/about" element={<About sendMsg={handleWhatsAppClick}/>} />
-        <Route path="/service" element={<Services />} />
-        <Route path="/contact" element={<Contact sendMsg={handleWhatsAppClick} />} />
-        <Route path="/success" element={<Success />} />
-      </Routes>
-      <Footer />
+      <AnimatePresence key={location.pathname} location={location}>
+        <Navbar />
+        <BackgroundAnimation />
+        <Routes>
+          <Route path="/" element={<Home sendMsg={handleWhatsAppClick}/>} />
+          <Route path="/about" element={<About sendMsg={handleWhatsAppClick}/>} />
+          <Route path="/service" element={<Services sendMsg={handleWhatsAppClick} />} />
+          <Route path="/contact" element={<Contact sendMsg={handleWhatsAppClick} />} />
+          <Route path="/success" element={<Success />} />
+        </Routes>
+        <Footer />
       </AnimatePresence>
     </>
   );
