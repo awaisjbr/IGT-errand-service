@@ -6,7 +6,7 @@ import findImg from "../assets/find.jpg";
 
 const HowItWorks = () => {
   return (
-    <div className="xl:h-screen lg:pt-24 px-2 select-none">
+    <div className="lg:pt-24 px-2 select-none">
       <div className="text-center">
         <h1 className="font-roboto text-4xl underline underline-offset-4 mb-5 bg-gray-200 w-fit mx-auto px-5 py-2 rounded-md">How It Works.</h1>
         <p className="text-sm text-wrap px-2 mb-5 font-poppins">Want to ease your life with errand runners? <br /><span className="text-[tomato] font-poppins text-lg font-bold">IGT on-Demand </span>is here to help.</p>

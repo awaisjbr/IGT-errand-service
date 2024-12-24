@@ -55,7 +55,7 @@ const Contact = ({sendMsg}) => {
 
   
   return (
-    <div className='flex flex-col items-center lg:h-screen pt-20 lg:pt-24'>
+    <div className='flex flex-col items-center pt-20 lg:pt-24'>
       <div className='my-2 text-center'>
         <h1 className='font-bigShoulder font-extrabold text-3xl tracking-wider'>Get in Touch</h1>
         <p className='font-poppins '>We’re here to assist you.</p>
@@ -64,31 +64,31 @@ const Contact = ({sendMsg}) => {
       <div className='flex flex-col md:flex-row gap-3 lg:gap-5 w-full lg:w-[90%] mt-10'>
         
         <div className='flex-1 hidden md:block'>
-          <div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162070.95186620127!2d54.43123837518988!3d24.356729720657192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e41363bec3597%3A0x2ec592a99064ef9c!2sCITYMART%20HYPERMARKET%20LLC!5e0!3m2!1sen!2s!4v1734968969280!5m2!1sen!2s" width="500" height="430" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> </div>
+          <div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79632.88980235001!2d54.40514746988053!3d24.41373521487062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1735033278631!5m2!1sen!2s" width="450" height="430" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> </div>
         </div>
 
-        <div className='hidden lg:block flex-1 my-auto'>
-          <div className='flex flex-col gap-4 items-center text-sm'>
-            <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] p-1 text-[rgb(108,78,232)]'>
+        <div className='hidden lg:block flex-1'>
+          <div className='flex flex-col gap-5 items-center justify-between text-sm'>
+            <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] py-4 text-[rgb(108,78,232)]'>
               <div className='h-10 w-10 bg-slate-500 flex items-center justify-center rounded-full'>
               <FaMapSigns className='text-yellow-400'/>
               </div>
               <p className='font-bigShoulder font-bold tracking-wider'>ADDRESS</p>
               <p className='font-poppins text-center'>P.O Box 0000 , Abu Dhabi, UAE.</p>
             </div>
-            <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] text-[rgb(108,78,232)] p-1'>
+            <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] text-[rgb(108,78,232)] py-2'>
               <div className='h-10 w-10 bg-slate-500 flex items-center justify-center rounded-full'>
               <FaPhoneAlt className='text-yellow-400'/>
               </div>
               <p className='font-bigShoulder font-bold tracking-wider'>CONTACT NUMBER</p>
-              <p className='flex items-center gap-3'><span className='text-green-600'><FaWhatsappSquare size={25} onClick={() => sendMsg()} className='cursor-pointer'/></span><a className='font-poppins' href="tel:+971581212786">+971 58 1212 786</a></p>
+              <p className='flex items-center gap-3'><span className='text-green-600'><FaWhatsappSquare size={25} onClick={() => sendMsg()} className='cursor-pointer'/></span><a className='font-poppins underline underline-offset-4 font-bold' href="tel:+971581212786">+971 58 1212 786</a></p>
             </div>
-            <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] text-[rgb(108,78,232)] p-1'>
+            <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] text-[rgb(108,78,232)] py-2'>
               <div className='h-10 w-10 bg-slate-500 flex items-center justify-center rounded-full'>
               <IoIosSend className='text-yellow-400'/>
               </div>
               <p className='font-bigShoulder font-bold tracking-wider'>EMAIL</p>
-              <p className='underline underline-offset-8'><a className='font-poppins' href="mailto:irhagt@gmail.com">irhagt@gmail.com</a></p>
+              <p className='underline underline-offset-8'><a className='font-poppins font-bold' href="mailto:irhagt@gmail.com">irhagt@gmail.com</a></p>
             </div>
           </div>
         </div> 
@@ -107,7 +107,7 @@ const Contact = ({sendMsg}) => {
         </div>
 
         <div className='flex-1 place-self-center md:hidden'>
-          <div className='mb-2'> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162070.95186620127!2d54.43123837518988!3d24.356729720657192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e41363bec3597%3A0x2ec592a99064ef9c!2sCITYMART%20HYPERMARKET%20LLC!5e0!3m2!1sen!2s!4v1734968969280!5m2!1sen!2s" width="350" height="350" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> </div>
+         <div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79632.88980235001!2d54.40514746988053!3d24.41373521487062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1735033278631!5m2!1sen!2s" width="350" height="350" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> </div>
         </div>
       
       </div>

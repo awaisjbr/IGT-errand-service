@@ -30,7 +30,7 @@ const ClientReviews = () => {
     }
 
   return (
-    <div className='h-[70vh] lg:h-[80vh] flex flex-col items-center relative overflow-hidden'>
+    <div className='h-[70vh] lg:h-[90vh] flex flex-col lg:pt-20 items-center relative overflow-hidden'>
         <h1 className='font-bigShoulder font-bold text-4xl'>Testimonial</h1>
         <div className='mt-10 max-w-[600px] w-[90%] overflow-hidden shadow-md'>
             <div className='py-1 carousel'>

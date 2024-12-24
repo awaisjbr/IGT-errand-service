@@ -10,7 +10,7 @@ import medicineImg from "../assets/medicine.jpg";
 
 const OurServices = () => {
   return (
-    <div className="h-screen pt-20 px-3">
+    <div className="pt-20 px-3">
 
       <div className="">
         <h1 className="font-roboto text-4xl underline underline-offset-8 mb-5 bg-gray-200 w-fit mx-auto px-5 py-2 rounded-md">Service Catalog.</h1>
