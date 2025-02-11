@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Hero = ({sendMsg}) => {
   return (
-    <div className="h-screen mt-3 lg:mt-16">
+    <div className="h-scree mt-3 lg:mt-16">
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center lg:flex-row">
           <div className="">

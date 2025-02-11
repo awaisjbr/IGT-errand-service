@@ -5,7 +5,7 @@ import { FaWhatsappSquare } from "react-icons/fa";
 
 const About = ({sendMsg}) => {
   return (
-    <div className="pt-20 lg:pt-24 overflow-hidden lg:mb-3">
+    <div className="pt-20 lg:pt-24 overflow-hidden lg:mb-3 home">
       <div className="flex flex-col">
         <h1 className="font-roboto text-4xl underline underline-offset-4 mb-5 bg-gray-200 w-fit mx-auto px-5 py-2 rounded-md">About Us.</h1>
         <p className="font-bigShoulder font-semibold text-xl lg:text-3xl text-center">"Simplifying Your Life, One Errand at a Time."</p>

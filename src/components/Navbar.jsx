@@ -8,7 +8,7 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
-    <div className="h-16 flex items-center fixed w-full top-0 left-0 bg-gradient-to-t from-lime-400 to-green-400 px-5 lg:w-[90%] lg:rounded-xl lg:top-5 lg:left-16 z-50">
+    <div className="h-16 flex items-center fixed w-full top-0 left-0 bg-gradient-to-t from-lime-400 to-green-400 px-5 z-50">
       <div className="w-full flex items-center justify-between relative">
         <div className="logo flex items-center gap-3">
           <img className="w-32 lg:w-40" src={logo} alt="" />

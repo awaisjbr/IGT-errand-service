@@ -17,9 +17,9 @@ const Footer = () => {
                 <h1 className='font-poppins text-2xl underline underline-offset-4 font-bold'>Quick Links</h1>
                 <ul className='mt-5'>
                   <NavLink><li className='font-mono'>About Us</li></NavLink>
-                  <NavLink><li className='font-mono'>Our Services</li></NavLink>
+                  <NavLink><li className='font-mono'>Privacy Policy</li></NavLink>
+                  <NavLink><li className='font-mono'>Terms of Service</li></NavLink>
                   <NavLink><li className='font-mono'>FAQs</li></NavLink>
-                  <NavLink><li className='font-mono'>Contact</li></NavLink>
                 </ul>
             </div>
             <div className='flex flex-col gap-1'>
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
         </div>
         <div className='text-white my-3'>
-            <p className='font-poppins text-xs text-center lg:text-md'>&copy; 2024 IGT on-demand services. All rights reserved. <NavLink className="font-poppins"> <br /> Terms of Service</NavLink> | <NavLink className="font-poppins">Privacy Policy</NavLink></p>
+            <p className='font-poppins text-xs text-center lg:text-md'>&copy; 2024 IGT on-demand services. All rights reserved.</p>
         </div>
       </div>
     </div>

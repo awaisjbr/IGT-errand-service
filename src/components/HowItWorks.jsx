@@ -15,25 +15,25 @@ const HowItWorks = () => {
       <div className="px-1 lg:mt-10 xl:mt-20">
         <div className="flex flex-wrap gap-5 place-content-center">
           <div className="border p-3 w-80 rounded-md flex flex-col gap-3">
-            <img className="h-52 w-full hover:scale-105 transition-all duration-500" src={findImg} alt="findImg" />
+            <img className="h-52 w-full hover:scale-105 transition-all duration-500 cursor-pointer" src={findImg} alt="findImg" />
             {/* <p>[]</p> */}
             <h2 className="font-roboto text-lg font-semibold">1 - Find & Book</h2>
             <p className="text-sm font-poppins">Find and book your required product within your comport zone. </p>
           </div>
           <div className="border p-3 w-80 rounded-md flex flex-col gap-3">
-            <img className="h-52 w-full hover:scale-105 transition-all duration-500" src={paymentImg} alt="findImg" />
+            <img className="h-52 w-full hover:scale-105 transition-all duration-500 cursor-pointer" src={paymentImg} alt="findImg" />
             {/* <p>[]</p> */}
             <h2 className="font-roboto text-lg font-semibold">2 - Buy it.</h2>
             <p className="text-sm font-poppins">Make a payment for your booking or let us pay and we wil add it. </p>
           </div>
           <div className="border p-3 w-80 rounded-md flex flex-col gap-3">
-            <img className="h-52 w-full hover:scale-105 transition-all duration-500" src={hireImg} alt="findImg" />
+            <img className="h-52 w-full hover:scale-105 transition-all duration-500 cursor-pointer" src={hireImg} alt="findImg" />
             {/* <p>[]</p> */}
             <h2 className="font-roboto text-lg font-semibold">3 - Hire our service.</h2>
             <p className="text-sm font-poppins">Book your runner and provide us details and we will handle it with care.</p>
           </div>
           <div className="border p-3 w-80 rounded-md flex flex-col gap-3">
-            <img className="h-52 w-full hover:scale-105 transition-all duration-500" src={deliverImg} alt="findImg" />
+            <img className="h-52 w-full hover:scale-105 transition-all duration-500 cursor-pointer" src={deliverImg} alt="findImg" />
             {/* <p>[]</p> */}
             <h2 className="font-roboto text-lg font-semibold">4 - We will deliver it.</h2>
             <p className="text-sm font-poppins">Find your items delivered safely at your doorstep. </p>

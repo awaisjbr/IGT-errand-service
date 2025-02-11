@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import { FaMapSigns } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import { TailSpin } from "react-loader-spinner";
+import Loading from '../components/Loading';
 
+const GoogleMap = lazy(() => import("../components/GoogleMap"));
 
 const Contact = ({sendMsg}) => {
   const [loading, setLoading] = useState(false);
@@ -55,7 +57,7 @@ const Contact = ({sendMsg}) => {
 
   
   return (
-    <div className='flex flex-col items-center pt-20 lg:pt-24'>
+    <div className='flex flex-col items-center pt-20 lg:pt-24 home'>
       <div className='my-2 text-center'>
         <h1 className='font-bigShoulder font-extrabold text-3xl tracking-wider'>Get in Touch</h1>
         <p className='font-poppins '>We’re here to assist you.</p>
@@ -64,10 +66,12 @@ const Contact = ({sendMsg}) => {
       <div className='flex flex-col md:flex-row gap-3 lg:gap-5 w-full lg:w-[90%] mt-10'>
         
         <div className='flex-1 hidden md:block'>
-          <div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79632.88980235001!2d54.40514746988053!3d24.41373521487062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1735033278631!5m2!1sen!2s" width="450" height="430" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> </div>
+          <Suspense fallback={<Loading />}>
+            <GoogleMap />
+          </Suspense>
         </div>
 
-        <div className='hidden lg:block flex-1'>
+        <div className='hidden lg:block flex-1 home'>
           <div className='flex flex-col gap-5 items-center justify-between text-sm'>
             <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] py-4 text-[rgb(108,78,232)]'>
               <div className='h-10 w-10 bg-slate-500 flex items-center justify-center rounded-full'>
