@@ -26,6 +26,10 @@
     color: black;
     z-index: 100;
   }
+  .active{
+    background-color: tomato;
+    border-radius: 8px;
+  }
 
   ::-webkit-scrollbar {
     width: 15px; /* For vertical scrollbar */

@@ -13,6 +13,7 @@ const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Terms = lazy(() => import("./pages/Terms"));
 
 const App = () => {
   const phoneNumber = "971581212786";
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/about" element={<About sendMsg={handleWhatsAppClick}/>} />
             <Route path="/service" element={<Services sendMsg={handleWhatsAppClick} />} />
             <Route path="/contact" element={<Contact sendMsg={handleWhatsAppClick} />} />
+            <Route path="/terms-and-conditions" element={<Terms sendMsg={handleWhatsAppClick} />} />
             <Route path="/success" element={<Success />} />
           </Routes>
         </Suspense>

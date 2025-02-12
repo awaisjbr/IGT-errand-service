@@ -3,15 +3,15 @@ import Img1 from "../assets/Img1.png";
 import Img2 from "../assets/Img2.png";
 import Img3 from "../assets/Img3.png";
 import Img4 from "../assets/Img4.png";
-import logoo from "../assets/logoo.png";
+// import logoo from "https://res-console.cloudinary.com/dpnjcu9gc/media_explorer_thumbnails/bc7bd19cc2e6cdbd245e434875a463f6/detailed";
 import { FaStar } from 'react-icons/fa6';
 
 const data = [
-    {img:logoo, name: "IGT On-demand Service", text: "Great Service great team, I highly recomended the service to acquire"},
-    {img:Img1, name: "Caty Simson", text: "Great Service great team, I highly recomended the service to acquire"},
-    {img:Img2, name: "Rey Mystereo", text: "Great Service great team, Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ut. I highly recomended the service to acquire"},
-    {img:Img3, name: "Any Roger Bison", text: "Great Service great team, Lorem ipsum dolor sit amet consectetur. Cupiditate, ut. I highly recomended the service to acquire"},
-    {img:Img4, name: "Roger Hakam", text: "Great Service great team, Lorem ipsum dolor sit amet consectetur. Cupiditate, ut. I highly recomended the service to acquire"},
+    {img:"https://res-console.cloudinary.com/dpnjcu9gc/media_explorer_thumbnails/bc7bd19cc2e6cdbd245e434875a463f6/detailed", name: "IGT On-demand Service", text: "Great Service great team, I highly recomended the service to acquire"},
+    {img:"https://res-console.cloudinary.com/dpnjcu9gc/media_explorer_thumbnails/bc7bd19cc2e6cdbd245e434875a463f6/detailed", name: "Review 1", text: "Great Service great team, I highly recomended the service to acquire"},
+    {img:"https://res-console.cloudinary.com/dpnjcu9gc/media_explorer_thumbnails/bc7bd19cc2e6cdbd245e434875a463f6/detailed", name: "Review 2", text: "Great Service great team, Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ut. I highly recomended the service to acquire"},
+    {img:"https://res-console.cloudinary.com/dpnjcu9gc/media_explorer_thumbnails/bc7bd19cc2e6cdbd245e434875a463f6/detailed", name: "Review 3", text: "Great Service great team, Lorem ipsum dolor sit amet consectetur. Cupiditate, ut. I highly recomended the service to acquire"},
+    {img:"https://res-console.cloudinary.com/dpnjcu9gc/media_explorer_thumbnails/bc7bd19cc2e6cdbd245e434875a463f6/detailed", name: "Review 4", text: "Great Service great team, Lorem ipsum dolor sit amet consectetur. Cupiditate, ut. I highly recomended the service to acquire"},
 ]
 
 const ClientReviews = () => {

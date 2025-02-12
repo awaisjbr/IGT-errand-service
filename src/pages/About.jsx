@@ -11,7 +11,7 @@ const About = ({sendMsg}) => {
         <p className="font-bigShoulder font-semibold text-xl lg:text-3xl text-center">"Simplifying Your Life, One Errand at a Time."</p>
         <div className="flex flex-col gap-5 lg:flex-row lg:mx-28 lg:gap-10">
           <div className="flex-1">
-            <img className="w-60 md:w-72 place-self-center" src={img2} alt="" />
+            <img className="w-60 md:w-72 place-self-center" src="https://res-console.cloudinary.com/dpnjcu9gc/media_explorer_thumbnails/3594620e527157360c529477a909d0ac/detailed" alt="" />
             <p className="text-sm lg:text-xs font-poppins text-justify px-10 text-gray-800 pb-5">
               <span className="text-xl font-bigShoulder font-bold text-black">IGT On-Demand</span>, we believe your time is precious.
               That’s why we’re here to handle life’s errands, so
@@ -27,7 +27,7 @@ const About = ({sendMsg}) => {
           </div>
 
           <div className="flex-1 hidden lg:block place-content-center">
-            <img className="h-36 mx-auto mt-5" src={hire} alt="" />
+            <img className="h-36 mx-auto mt-5" src="https://res-console.cloudinary.com/dpnjcu9gc/media_explorer_thumbnails/9bb04a9964285b676d411d5fec8e605d/detailed" alt="" />
             <p className="font-poppins mt-2 text-justify text-sm">At <span className="text-xl font-bigShoulder font-bold text-black">IGT On-Demand</span>, we understand how busy life can get. That’s why we’ve made it our mission to handle your errands with care, efficiency, and professionalism. From grocery runs to parcel pickups, we’re here to make your day easier.</p>
             <h3 className="font-bigShoulder text-xl font-bold my-1">Why Choose Us?</h3>
             <ul className="ml-16">

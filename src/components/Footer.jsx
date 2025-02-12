@@ -18,7 +18,7 @@ const Footer = () => {
                 <ul className='mt-5'>
                   <NavLink><li className='font-mono'>About Us</li></NavLink>
                   <NavLink><li className='font-mono'>Privacy Policy</li></NavLink>
-                  <NavLink><li className='font-mono'>Terms of Service</li></NavLink>
+                  <NavLink to={"/terms-and-conditions"}><li className='font-mono'>Terms of Service</li></NavLink>
                   <NavLink><li className='font-mono'>FAQs</li></NavLink>
                 </ul>
             </div>
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
         </div>
         <div className='text-white my-3'>
-            <p className='font-poppins text-xs text-center lg:text-md'>&copy; 2024 IGT on-demand services. All rights reserved.</p>
+            <p className='font-poppins text-xs text-center lg:text-md'>&copy; 2025 IGT on-demand services. All rights reserved.</p>
         </div>
       </div>
     </div>
