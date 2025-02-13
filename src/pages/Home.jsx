@@ -1,21 +1,14 @@
-import React, { lazy, useContext, useState } from "react";
-// import Hero from "../components/Hero";
-// import HowItWorks from "../components/HowItWorks";
-// import OurServices from "../components/OurServices";
-import Footer from "../components/Footer";
+import React, { lazy, Suspense } from "react";
 import { FaSquareWhatsapp } from "react-icons/fa6";
-import ClientReviews from "../components/ClientReviews";
 import { Helmet } from "react-helmet-async";
-import SelectCity from "../components/SelectCity";
-import { CityContext } from "../context/CityContext";
+import Loading from "../components/Loading";
 
 const Hero = lazy(() => import("../components/Hero"));
 const HowItWorks = lazy(() => import("../components/HowItWorks"));
 const OurServices = lazy(() => import("../components/OurServices"));
+const ClientReviews = lazy(() => import("../components/ClientReviews"));
 
 const Home = ({ sendMsg }) => {
-    const {selectedCity, setSelectedCity} = useContext(CityContext);
-    const [cityBox, selectCityBox] = useState(true)
   
   return (
     <div className="pt-8 lg:pt-0 relative home">
@@ -31,10 +24,12 @@ const Home = ({ sendMsg }) => {
 
 
       {/* Home Page Components */}
-      <Hero sendMsg={sendMsg} />
-      <HowItWorks />
-      <OurServices />
-      <ClientReviews />
+      <Suspense fallback={<Loading />}>
+        <Hero sendMsg={sendMsg} />
+        <HowItWorks />
+        <OurServices />
+        <ClientReviews />
+      </Suspense>
       {/* <Footer /> */}
       <div onClick={() => sendMsg()} className="fixed bottom-8 right-6 bg-white rounded-md text-5xl lg:text-7xl cursor-pointer text-green-500">
         <FaSquareWhatsapp />

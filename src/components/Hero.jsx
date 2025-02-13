@@ -8,7 +8,7 @@ const Hero = ({sendMsg}) => {
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center lg:flex-row">
           <div className="">
-            <img className="w-72 lg:w-[600px]" src="https://res-console.cloudinary.com/dpnjcu9gc/media_explorer_thumbnails/8996fa0097c9128566921395c418cc08/detailed" alt="" />
+            <img className="w-72 lg:w-[600px]" src="https://res.cloudinary.com/dpnjcu9gc/image/upload/v1739342028/hero_z7z9en.jpg" alt="" />
           </div>
           <div className="select-none">
             <h1 className="text-4xl text-center font-bigShoulder pointer-events-none uppercase leading-snug lg:text-5xl xl:text-6xl lg:leading-snug lg:font-semibold">Secure, Fast, Reliable <br /> <span className="font-bigShoulder text-[tomato] underline font-bold tracking-wider lg:leading-snug">errands</span>  <br /> Pick and Deliver Service <br /> at Your Doorstep.</h1>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import logo from "../assets/logoo.png";
 import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className="h-16 flex items-center fixed w-full top-0 left-0 bg-gradient-to-t from-lime-400 to-green-400 px-5 z-40">
       <div className="w-full flex items-center justify-between relative">
         <div className="logo flex items-center gap-3 cursor-pointer" onClick={() => navigate("/")}>
-          <img className="w-32 lg:w-40" src="https://res-console.cloudinary.com/dpnjcu9gc/media_explorer_thumbnails/bc7bd19cc2e6cdbd245e434875a463f6/detailed" alt="logoo" />
+          <img className="w-32 lg:w-40" src="https://res.cloudinary.com/dpnjcu9gc/image/upload/v1739342041/logoo_f8dvsl.png" alt="logoo" />
           {/* <h3 className="text-white font-poppins">IGT</h3> */}
         </div>
         <div className="text-white text-3xl cursor-pointer lg:hidden">
