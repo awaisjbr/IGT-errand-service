@@ -21,7 +21,7 @@ const App = () => {
   const {selectedCity, setSelectedCity} = useContext(CityContext);
   const [cityBox, selectCityBox] = useState(true)
   
-  const phoneNumber = selectedCity === 'abu-dhabi' ? "971581212786" : "971581212788";
+  const phoneNumber = selectedCity === 'abu-dhabi' ? "971581212786" : "971505608213";
   const message = encodeURIComponent("Hey there! I'am intersted in your on-demand pick & deliver service!");
 
   const handleWhatsAppClick = () => {
