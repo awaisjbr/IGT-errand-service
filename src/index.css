@@ -8,24 +8,9 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* Prevent scrollbars during animation */
-    /* overflow: hidden; */
     font-family: "Roboto";
   }
-  /* .hero{
-    min-height: calc(100vh - 56px);
-  } */
-  
-  .black-motion {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100%;
-    background-color: black;
-    color: black;
-    z-index: 100;
-  }
+
   .active{
     background-color: tomato;
     border-radius: 8px;
@@ -69,26 +54,6 @@
     width: 0;
     height: 0;
   }}
-
-.carousel{
-  animation: slide 10s linear infinite;
-  overflow: hidden;
-}
-@keyframes slide{
-  0%{
-    opacity: 1;
-    transform: translate(-100%);
-  }
-  26%,75%{
-    opacity: 1;
-    transform: translate(0);
-  }
-  100%{
-    opacity: 0.5;
-    transform: translate(100%);
-  }
-
-}
 
 
 .home{

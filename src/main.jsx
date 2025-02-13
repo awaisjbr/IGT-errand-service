@@ -3,11 +3,14 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { ContextProvider } from "./context/CityContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <HelmetProvider>
-      <App />
+      <ContextProvider>
+        <App />
+      </ContextProvider>
     </HelmetProvider>
   </BrowserRouter>
 );

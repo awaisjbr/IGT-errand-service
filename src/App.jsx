@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Success from "./components/Success";
 import Loading from "./components/Loading";
+import {CityContext} from "./context/CityContext"
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -16,7 +17,10 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Terms = lazy(() => import("./pages/Terms"));
 
 const App = () => {
-  const phoneNumber = "971581212786";
+  const {selectedCity, setSelectedCity} = useContext(CityContext);
+  
+  
+  const phoneNumber = selectedCity === 'abu-dhabi' ? "971581212786" : "971581212788";
   const message = encodeURIComponent("Hey there! I'am intersted in your on-demand pick & deliver service!");
 
   const handleWhatsAppClick = () => {

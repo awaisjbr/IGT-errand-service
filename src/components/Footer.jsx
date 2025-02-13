@@ -11,7 +11,7 @@ const Footer = () => {
             <div className='text-white flex flex-col gap-5 lg:flex-row lg:justify-between my-3 lg:my-10'>
             <div className='mt-3'>
                 <img className='w-48' src={logo} alt="" />
-                <p className='font-poppins text-xs'>Your reliable partner for pickup and delivery errands.</p>
+                <p className='font-poppins text-xs'>Your reliable partner for pickup and deliver service.</p>
             </div>
             <div>
                 <h1 className='font-poppins text-2xl underline underline-offset-4 font-bold'>Quick Links</h1>
