@@ -31,7 +31,6 @@ const Home = ({ sendMsg }) => {
 
 
       {/* Home Page Components */}
-      {cityBox ? (selectedCity ? null : <SelectCity selectCityBox={selectCityBox}/>) : null}
       <Hero sendMsg={sendMsg} />
       <HowItWorks />
       <OurServices />

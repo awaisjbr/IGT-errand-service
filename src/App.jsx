@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useContext } from "react";
+import React, { lazy, Suspense, useContext, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Success from "./components/Success";
 import Loading from "./components/Loading";
 import {CityContext} from "./context/CityContext"
+import SelectCity from "./components/SelectCity";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -18,7 +19,7 @@ const Terms = lazy(() => import("./pages/Terms"));
 
 const App = () => {
   const {selectedCity, setSelectedCity} = useContext(CityContext);
-  
+  const [cityBox, selectCityBox] = useState(true)
   
   const phoneNumber = selectedCity === 'abu-dhabi' ? "971581212786" : "971581212788";
   const message = encodeURIComponent("Hey there! I'am intersted in your on-demand pick & deliver service!");
@@ -29,6 +30,7 @@ const App = () => {
 
   return (
     <>
+        {cityBox ? (selectedCity ? null : <SelectCity selectCityBox={selectCityBox}/>) : null}
         <Navbar />
         <Suspense fallback={<Loading />}>
           <Routes>
