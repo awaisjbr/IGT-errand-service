@@ -16,6 +16,8 @@ const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Terms = lazy(() => import("./pages/Terms"));
+const Policy = lazy(() => import("./pages/Policy"));
+const FAQs = lazy(() => import("./pages/FAQs"));
 
 const App = () => {
   const {selectedCity, setSelectedCity} = useContext(CityContext);
@@ -39,6 +41,8 @@ const App = () => {
             <Route path="/service" element={<Services sendMsg={handleWhatsAppClick} />} />
             <Route path="/contact" element={<Contact sendMsg={handleWhatsAppClick} />} />
             <Route path="/terms-and-conditions" element={<Terms sendMsg={handleWhatsAppClick} />} />
+            <Route path="/privacy-policy" element={<Policy sendMsg={handleWhatsAppClick} />} />
+            <Route path="/faqs" element={<FAQs sendMsg={handleWhatsAppClick} />} />
             <Route path="/success" element={<Success />} />
           </Routes>
         </Suspense>

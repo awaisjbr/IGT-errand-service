@@ -1,15 +1,18 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { lazy, Suspense, useContext, useState } from 'react';
 import { FaMapSigns } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
 import { FaWhatsappSquare } from "react-icons/fa";
+// import { FaPhoneAlt } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import { TailSpin } from "react-loader-spinner";
 import Loading from '../components/Loading';
+import { CityContext } from '../context/CityContext';
 
 const GoogleMap = lazy(() => import("../components/GoogleMap"));
 
 const Contact = ({sendMsg}) => {
+  const {selectedCity} = useContext(CityContext);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -49,7 +52,7 @@ const Contact = ({sendMsg}) => {
         throw new Error('Form submission failed.');
       }
     } catch (err) {
-      console.log(err.message);
+      alert(err.message);
     } finally{
       setLoading(false);
     }
@@ -78,14 +81,14 @@ const Contact = ({sendMsg}) => {
               <FaMapSigns className='text-yellow-400'/>
               </div>
               <p className='font-bigShoulder font-bold tracking-wider'>ADDRESS</p>
-              <p className='font-poppins text-center'>P.O Box 0000 , Abu Dhabi, UAE.</p>
+              <p className='font-poppins text-center'>P.O Box 0000 , {selectedCity === "abu-dhabi" ? "Abu Dhabi" : "Dubai"}, UAE.</p>
             </div>
             <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] text-[rgb(108,78,232)] py-2'>
               <div className='h-10 w-10 bg-slate-500 flex items-center justify-center rounded-full'>
               <FaPhoneAlt className='text-yellow-400'/>
               </div>
               <p className='font-bigShoulder font-bold tracking-wider'>CONTACT NUMBER</p>
-              <p className='flex items-center gap-3'><span className='text-green-600'><FaWhatsappSquare size={25} onClick={() => sendMsg()} className='cursor-pointer'/></span><a className='font-poppins underline underline-offset-4 font-bold' href="tel:+971581212786">+971 58 1212 786</a></p>
+              <p className='flex items-center gap-3'><span className='text-green-600'><FaWhatsappSquare size={25} onClick={() => sendMsg()} className='cursor-pointer'/></span><a className='font-poppins underline underline-offset-4 font-bold' href={selectedCity === "abu-dhabi" ? "tel:+971581212786" : "tel:+971505608213"}>{selectedCity === "abu-dhabi" ? "+971 58 1212 786" : "+971 50 560 8213"}</a></p>
             </div>
             <div className='flex items-center justify-center gap-2 flex-col bg-slate-200 w-full md:w-[80%] text-[rgb(108,78,232)] py-2'>
               <div className='h-10 w-10 bg-slate-500 flex items-center justify-center rounded-full'>
@@ -111,9 +114,12 @@ const Contact = ({sendMsg}) => {
         </div>
 
         <div className='flex-1 place-self-center md:hidden'>
-         <div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79632.88980235001!2d54.40514746988053!3d24.41373521487062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1735033278631!5m2!1sen!2s" width="350" height="350" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> </div>
+         <div> <iframe src={selectedCity === "abu-dhabi" ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79632.88980235001!2d54.40514746988053!3d24.41373521487062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1735033278631!5m2!1sen!2s" : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d115562.20243897242!2d55.27040334423832!3d25.158710275530257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sus!4v1739455435294!5m2!1sen!2sus"} width="350" height="350" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> </div>
         </div>
-      
+      </div>
+
+      <div onClick={() => sendMsg()} className="fixed bottom-8 right-6 bg-white rounded-md text-5xl lg:text-7xl cursor-pointer text-green-500">
+        <FaWhatsappSquare />
       </div>
 
       {loading && (
@@ -129,7 +135,7 @@ const Contact = ({sendMsg}) => {
             wrapperClass=""
           />
         </div>
-      )};
+      )}
     </div>
   )
 }
